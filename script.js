@@ -6,7 +6,6 @@ var victor = "";
 function setUpPage() {
   var tiles = document.getElementsByClassName("board-tile");
   for (i = 0; i < tiles.length; i++) {
-    //debugger;
     tiles[i].addEventListener("click", markTile);
   }
 };
