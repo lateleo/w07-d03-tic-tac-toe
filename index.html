@@ -16,23 +16,16 @@
     <div class="player-scores-container">
       <!-- scores a dummy scores for output display purposes, rather than the
       actual starting scores -->
-      <p class="score">Player X Score: <span id="x-score">3</span></p>
-      <p class="score">Player O Score: <span id="o-score">2</span></p>
+      <p class="score">Player X Score: <span id="x-score">0</span></p>
+      <p class="score">Player O Score: <span id="o-score">0</span></p>
     </div>
 
     <div class="message-container">
-      <div id="player-x-ready" class="visible">
-        <p class="ready-message">Player X, it's your move!</p>
+      <div id="announce-turn" class="visible">
+        <p class="ready-message">Player <span id="player">X</span>, it's your move!</p>
       </div>
-      <div id="player-o-ready" class="hidden">
-        <p class="ready-message">Player O, it's your move!</p>
-      </div>
-      <div id="player-x-wins" class="hidden">
-        <p class="outcome-message">Player X wins!</p>
-        <p class="new-game" id="new-game-prompt">Play again?</p>
-      </div>
-      <div id="player-o-wins" class="hidden">
-        <p class="outcome-message">Player O wins!</p>
+      <div id="player-wins" class="hidden">
+        <p class="outcome-message">Player <span id="victor"></span> wins!</p>
         <p class="new-game" id="new-game-prompt">Play again?</p>
       </div>
       <div id="tie-game" class="hidden">
@@ -44,19 +37,19 @@
     <div class="board-container">
       <table class="board" id="game-board">
         <tr>
-          <td class="board-tile row-1 col-1" id="tile-1-1">1</td>
-          <td class="board-tile row-1 col-2" id="tile-1-2">2</td>
-          <td class="board-tile row-1 col-3" id="tile-1-3">3</td>
+          <td class="board-tile row-1 col-1 diag-1" id="tile-1-1"></td>
+          <td class="board-tile row-1 col-2" id="tile-1-2"></td>
+          <td class="board-tile row-1 col-3 diag-2" id="tile-1-3"></td>
         </tr>
         <tr>
-          <td class="board-tile row-2 col-1" id="tile-2-1">4</td>
-          <td class="board-tile row-2 col-2" id="tile-2-2">5</td>
-          <td class="board-tile row-2 col-3" id="tile-2-3">6</td>
+          <td class="board-tile row-2 col-1" id="tile-2-1"></td>
+          <td class="board-tile row-2 col-2 diag-1 diag-2" id="tile-2-2"></td>
+          <td class="board-tile row-2 col-3" id="tile-2-3"></td>
         </tr>
         <tr>
-          <td class="board-tile row-3 col-1" id="tile-3-1">4</td>
-          <td class="board-tile row-3 col-2" id="tile-3-2">5</td>
-          <td class="board-tile row-3 col-3" id="tile-3-3">6</td>
+          <td class="board-tile row-3 col-1 diag-2" id="tile-3-1"></td>
+          <td class="board-tile row-3 col-2" id="tile-3-2"></td>
+          <td class="board-tile row-3 col-3 diag-1" id="tile-3-3"></td>
         </tr>
       </table>
     </div>
@@ -65,14 +58,8 @@
       <h2 class="game-log-header">Game Log</h2>
       <ol class="game-log-list" id="game-log">
         <!-- dummy data -->
-        <li class="game-log-item">Player X won.</li>
-        <li class="game-log-item">Player X won.</li>
-        <li class="game-log-item">Cat's game (tie)</li>
-        <li class="game-log-item">Player X won.</li>
-        <li class="game-log-item">Cat's game (tie)</li>
-        <li class="game-log-item">Player O won</li>
-        <li class="game-log-item">Cat's game (tie)</li>
-        <li class="game-log-item">Player O won</li>
+        <li class="game-log-item">Outcome of previous games goes here.</li>
+
       </ol>
     </div>
   </div>
