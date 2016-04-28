@@ -10,6 +10,8 @@ function setUpPage() {
   }
 };
 
+//-------------------------------------------------
+
 function switchPlayer() {
   if (activePlayer === "X") {
     activePlayer = "O";
